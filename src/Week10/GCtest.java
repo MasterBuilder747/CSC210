@@ -9,7 +9,7 @@ public class GCtest {
             x = new int[1000]; //heap, allocate new
             x[0] = 0;
 
-
+            //object/class reference = heap object/class(parameter list);
         }
 
     }
