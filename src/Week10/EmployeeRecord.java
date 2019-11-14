@@ -99,6 +99,7 @@ public class EmployeeRecord {
 
     //override
     @Override //this is a comment, used for javadoc formatting, ignored by the compiler
+    //prints out the package, and scope in the heap
     public String toString() {
         if (getName() == null) {
             return "no name" + "\t" + this.getId() + "\t" + this.getSalary();
