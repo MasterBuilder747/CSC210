@@ -4,6 +4,8 @@ public class Card {
     private int value; // [1 - 11]
     private int suite; // [1-4]
 
+    //good for in case or for internal use
+    //in the future
     private Card() {
 
     }
@@ -75,10 +77,13 @@ public class Card {
 
     public static void main(String[] args) {
 
+        //test printing out all cards
+        int card = 0;
         for (int suite = 1; suite <= 4; suite++) {
             for (int value = 1; value <= 13; value++) {
                 Card c = new Card(value, suite);
-                System.out.println(c);
+                card = card + 1;
+                System.out.println(card + " " + c);
             }
         }
 
