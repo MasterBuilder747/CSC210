@@ -10,7 +10,7 @@ public class Card {
 
     }
 
-    private Card(int value, int suite) throws IllegalArgumentException {
+    public Card(int value, int suite) throws IllegalArgumentException {
         //handle the value of the card
         if ((value > 0) && (value <= 13)) {
             this.value = value;
