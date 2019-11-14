@@ -1,14 +1,17 @@
 package Week11.BlackJack;
 
-public class Card {
+//old file, ignore
+//kotlin issue when loading and program does not run in intellJ
+
+public class Card1 {
     private int value; // [1 - 11]
     private int suite; // [1-4]
 
-    private Card() {
+    private Card1() {
 
     }
 
-    private Card(int value, int suite) throws IllegalArgumentException {
+    private Card1(int value, int suite) throws IllegalArgumentException {
         //handle the value of the card
         if ((value > 0) && (value <= 13)) {
             this.value = value;
@@ -58,6 +61,7 @@ public class Card {
                 s = "" + value; // "" + int converts to String
         }
 
+
         switch(suite) {
             case 1: s += "Hearts";
             break;
@@ -73,7 +77,24 @@ public class Card {
 
     public static void main(String[] args) {
 
+        for (int suite = 1; suite <= 4; suite++) {
+            for (int value = 1; value <= 13; value++) {
+                Card1 c = new Card1(value, suite);
+                System.out.println(c);
+            }
+        }
 
+        //test invalid cards
+        try {
+            Card1 cExecption = new Card1(5, 10);
+        }catch (IllegalArgumentException e) {
+            System.out.println(e);
+        }
+        try {
+            Card1 cExecption = new Card1(4, 13);
+        }catch (IllegalArgumentException e) {
+            System.out.println(e);
+        }
 
     }
 }
