@@ -14,7 +14,8 @@ public class Deck {
         int i = 0;
         for (int suite = 1; suite <= 4; suite++) {
             for (int value = 1; value <= 13; value++) {
-                Card c = new Card(value, suite);
+                //Card c = new Card(value, suite);
+                deck[i++] = new Card(value, suite);
             }
         }
     }
