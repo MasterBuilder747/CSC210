@@ -89,7 +89,6 @@ public class Card {
 
         //test invalid cards
         //good for understanding the code and design
-        /*
         try {
             Card cExecption = new Card(5, 10);
         }catch (IllegalArgumentException e) {
@@ -100,7 +99,6 @@ public class Card {
         }catch (IllegalArgumentException e) {
             System.out.println(e);
         }
-        */
 
     }
 }
