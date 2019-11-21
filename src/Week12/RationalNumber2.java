@@ -1,6 +1,8 @@
 package Week12;
 
-public class RationalNumber {
+import java.util.Scanner;
+
+public class RationalNumber2 {
 
     /*
     NOTES:
@@ -19,14 +21,14 @@ public class RationalNumber {
     private int denominator;
     private int sign; //1 or -1
 
-    public RationalNumber() {
+    public RationalNumber2() {
         //yes, this is redundant, but it is important to be here in case it needs to be changed
         this.denominator = 0;
         this.numerator = 1;
         this.sign = 1;
     }
 
-    public RationalNumber (int numerator, int denominator) throws IllegalArgumentException {
+    public RationalNumber2(int numerator, int denominator) throws IllegalArgumentException {
         if (denominator == 0) {
             throw new IllegalArgumentException("0 denominator");
         }
@@ -62,8 +64,21 @@ public class RationalNumber {
     }
 
     public static void main(String[] args) {
+        Scanner kb = new Scanner(System.in);
 
+        try {
+            int num = kb.nextInt();
+            System.out.println("numerator: ");
+            int den = kb.nextInt();
+            System.out.println("denominator: ");
 
+            RationalNumber2 r = new RationalNumber2(num, den);
+            System.out.println(r);
+        }catch (IllegalArgumentException e) {
+            System.out.println(e);
+        }
+        System.out.println("default: " + new RationalNumber2());
+        kb.close();
 
     }
 
