@@ -20,7 +20,7 @@ public class BlackJack {
         try {
             for (int j = 0; j < 2; ++j) {
                 for (int i = 0; i < nPlayers; ++i) {
-                    players[i].receiveCard(); //fix this later
+                    //players[i].receiveCard(); //fix this later
                 }
                 Card c = deck.deal();
                 dealer.receiveCard(deck.deal());
