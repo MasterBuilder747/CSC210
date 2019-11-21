@@ -17,11 +17,13 @@ public class RationalNumber {
 
     private int numerator;
     private int denominator;
+    private int sign; //1 or -1
 
     public RationalNumber() {
         //yes, this is redundant, but it is important to be here in case it needs to be changed
         this.denominator = 0;
         this.numerator = 1;
+        this.sign = 1;
     }
 
     public RationalNumber (int numerator, int denominator) throws IllegalArgumentException {
@@ -30,7 +32,25 @@ public class RationalNumber {
         }
         this.numerator = numerator;
         this.denominator = denominator;
-    }
+
+        //do the math then put in the sign of the number
+        if (numerator < 0 && denominator > 0) {
+            sign = -1;
+            this.numerator = -numerator; //negation operator: "-"
+            this.denominator = denominator;
+        }else if (numerator > 0 && denominator < 0) {
+            sign = -1;
+            this.numerator = numerator;
+            this.denominator = -denominator;
+        }else if (numerator < 0 && denominator < 0){
+            this.sign = 1;
+            this.numerator = -numerator;
+            this.denominator = -denominator;
+        }else{
+            this.numerator = numerator;
+            this.denominator = denominator;
+        }
+     }
 
 
     public static void main(String[] args) {
