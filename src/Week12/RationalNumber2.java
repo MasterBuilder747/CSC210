@@ -79,7 +79,50 @@ public class RationalNumber2 {
         }
         System.out.println("default: " + new RationalNumber2());
         kb.close();
+    }
 
+    public int getNumerator() {
+        return numerator;
+    }
+
+    public void setNumerator(int numerator) {
+        this.numerator = numerator;
+    }
+
+    public int getDenominator() {
+        return denominator;
+    }
+
+    public void setDenominator(int denominator) {
+        this.denominator = denominator;
+    }
+
+    public int getSign() {
+        return sign;
+    }
+
+    public void setSign(int sign) {
+        this.sign = sign;
+    }
+
+    // -- this + rhs
+    public RationalNumber2 add(RationalNumber2 rhs) {
+        return new RationalNumber2();
+    }
+
+    // -- this - rhs
+    public RationalNumber2 sub(RationalNumber2 rhs) {
+        return new RationalNumber2();
+    }
+
+    // -- this * rhs
+    public RationalNumber2 div(RationalNumber2 rhs) {
+        return new RationalNumber2();
+    }
+
+    // -- this / rhs
+    public RationalNumber2 mul(RationalNumber2 rhs) {
+        return new RationalNumber2();
     }
 
 }
