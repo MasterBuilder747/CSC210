@@ -72,8 +72,13 @@ public class RationalNumber2 {
             int den = kb.nextInt();
             System.out.println("denominator: ");
 
-            RationalNumber2 r = new RationalNumber2(num, den);
-            System.out.println(r);
+            RationalNumber2 r0 = new RationalNumber2(1, 2);
+            RationalNumber2 r1 = new RationalNumber2(3, 4);
+            System.out.println("add: " + r0.add(r1));
+            System.out.println("sub: " + r0.sub(r1));
+            System.out.println("mul: " + r0.mul(r1));
+            System.out.println("div: " + r0.div(r1));
+
         }catch (IllegalArgumentException e) {
             System.out.println(e);
         }
