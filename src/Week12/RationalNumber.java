@@ -42,7 +42,7 @@ public class RationalNumber {
             sign = -1;
             this.numerator = numerator;
             this.denominator = -denominator;
-        }else if (numerator < 0 && denominator < 0){
+        }else if (numerator < 0 && denominator < 0) {
             this.sign = 1;
             this.numerator = -numerator;
             this.denominator = -denominator;
@@ -50,15 +50,21 @@ public class RationalNumber {
             this.numerator = numerator;
             this.denominator = denominator;
         }
-     }
+    }
 
+    public String toString () {
+        String s = "";
+        if (this.sign < 0) {
+            s = s + "-";
+        }
+        s = s + numerator + "/" + denominator;
+        return s;
+    }
 
     public static void main(String[] args) {
 
 
 
     }
-
-
 
 }
