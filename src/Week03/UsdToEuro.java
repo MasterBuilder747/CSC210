@@ -1,4 +1,4 @@
-package Converter;
+package Week03;
 
 import java.util.Scanner;
 

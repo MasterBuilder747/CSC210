@@ -5,7 +5,7 @@ public class Prime {
     public static void main(String[] args) {
 
         //midterm question
-        //this actually does not ork, has a semantic error
+        //this actually does not work, has a semantic error
         for(int n = 0; n < 102; ++n) {
             try {
                 System.out.println(n + " " + prime(n));
